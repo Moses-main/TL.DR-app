@@ -23,6 +23,11 @@ import { Button } from "./components/DemoComponents";
 import { Icon } from "./components/DemoComponents";
 import { Home } from "./components/DemoComponents";
 import { Features } from "./components/DemoComponents";
+// IMPORT FOR THE FARCASTER MINI APP
+import { Header } from "./components/Header";
+import { TabNavigation } from "./components/TabNavigation";
+import { TrendingTopics } from "./components/TrendingTopics";
+import { RecapFeed } from "./components/RecapFeed";
 
 export default function App() {
   const { setFrameReady, isFrameReady, context } = useMiniKit();
@@ -71,9 +76,11 @@ export default function App() {
   }, [context, frameAdded, handleAddFrame]);
 
   return (
-    <div className="flex flex-col min-h-screen font-sans text-[var(--app-foreground)] mini-app-theme from-[var(--app-background)] to-[var(--app-gray)]">
-      <div className="w-full max-w-md mx-auto px-4 py-3">
-        <header className="flex justify-between items-center mb-3 h-11">
+    <div>
+      <div>
+        {/* <div className="flex flex-col min-h-screen font-sans text-[var(--app-foreground)] mini-app-theme from-[var(--app-background)] to-[var(--app-gray)]"> */}
+        {/* <div className="w-full max-w-md mx-auto px-4 py-3"> */}
+        {/* <header className="flex justify-between items-center mb-3 h-11">
           <div>
             <div className="flex items-center space-x-2">
               <Wallet className="z-10">
@@ -93,14 +100,26 @@ export default function App() {
             </div>
           </div>
           <div>{saveFrameButton}</div>
-        </header>
+        </header> */}
 
         <main className="flex-1">
-          {activeTab === "home" && <Home setActiveTab={setActiveTab} />}
-          {activeTab === "features" && <Features setActiveTab={setActiveTab} />}
+          <div className="bg-[#0F172A] min-h-screen text-white w-full">
+            <div className="max-w-lg mx-auto p-4">
+              <Header />
+              <TabNavigation
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+              <TrendingTopics timeframe={activeTab} />
+              <RecapFeed timeframe={activeTab} />
+            </div>
+          </div>
+          {/* {activeTab === "home" && <Home setActiveTab={setActiveTab} />} */}
+          {/* {activeTab === "features" && <Features setActiveTab={setActiveTab} />} */}
         </main>
 
-        <footer className="mt-2 pt-4 flex justify-center">
+        {/* UNCOMMENT TO BRING BACK THE FOOTER */}
+        {/* <footer className="mt-2 pt-4 flex justify-center">
           <Button
             variant="ghost"
             size="sm"
@@ -109,7 +128,7 @@ export default function App() {
           >
             Built on Base with MiniKit
           </Button>
-        </footer>
+        </footer> */}
       </div>
     </div>
   );
