@@ -10,7 +10,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 1,
       username: "Dan Romero",
       handle: "dwr",
-      avatar: "../logo.png",
+      avatar: "/logo.png",
       content:
         "Frames are the most exciting thing to happen to the web in years. They bring interactivity to social media in a way we haven't seen before.",
       likes: 423,
@@ -22,7 +22,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 2,
       username: "Varun Srinivasan",
       handle: "varunsrin",
-      avatar: "../DP.jpg",
+      avatar: "/DP.jpg",
       content:
         "Just shipped a major update to the Farcaster protocol. Check out the new features and let me know what you think!",
       likes: 387,
@@ -34,7 +34,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 3,
       username: "Jesse Pollak",
       handle: "jessepollak",
-      avatar: "../DP.jpg",
+      avatar: "/DP.jpg",
       content:
         "Base is growing faster than expected. The ecosystem is thriving with new dapps launching every day.",
       likes: 356,
@@ -49,7 +49,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 1,
       username: "Vitalik Buterin",
       handle: "vitalik",
-      avatar: "../logo.png",
+      avatar: "/logo.png",
       content:
         "The future of Ethereum L2s is bright. We're seeing unprecedented adoption and innovation in the space.",
       likes: 1243,
@@ -61,7 +61,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 2,
       username: "Balaji Srinivasan",
       handle: "balajis",
-      avatar: "../DP.jpg",
+      avatar: "/DP.jpg",
       content:
         "Decentralized social media is the next frontier. Protocols like Farcaster are showing what's possible when you rebuild social from first principles.",
       likes: 987,
@@ -73,7 +73,7 @@ export const RecapFeed: React.FC<RecapFeedProps> = ({ timeframe }) => {
       id: 3,
       username: "Dwr.eth",
       handle: "dwr",
-      avatar: "../logo.png",
+      avatar: "/logo.png",
       content:
         "Announcing our new funding round! Excited to build the future of decentralized social media with this amazing team.",
       likes: 876,

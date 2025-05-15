@@ -2,8 +2,8 @@
 
 import {
   useMiniKit,
-  useAddFrame,
-  useOpenUrl,
+  // useAddFrame,
+  // useOpenUrl,
 } from "@coinbase/onchainkit/minikit";
 // import {
 //   Name,
@@ -18,9 +18,14 @@ import {
 //   WalletDropdown,
 //   WalletDropdownDisconnect,
 // } from "@coinbase/onchainkit/wallet";
-import { useEffect, useMemo, useState, useCallback } from "react";
-import { Button } from "./components/DemoComponents";
-import { Icon } from "./components/DemoComponents";
+import {
+  useEffect,
+  // useMemo,
+  useState,
+  // useCallback
+} from "react";
+// import { Button } from "./components/DemoComponents";
+// import { Icon } from "./components/DemoComponents";
 // import { Home } from "./components/DemoComponents";
 // import { Features } from "./components/DemoComponents";
 // IMPORT FOR THE FARCASTER MINI APP
@@ -30,11 +35,14 @@ import { TrendingTopics } from "./components/TrendingTopics";
 import { RecapFeed } from "./components/RecapFeed";
 
 export default function App() {
-  const { setFrameReady, isFrameReady, context } = useMiniKit();
-  const [frameAdded, setFrameAdded] = useState(false);
+  const {
+    setFrameReady,
+    isFrameReady, // context
+  } = useMiniKit();
+  // const [frameAdded, setFrameAdded] = useState(false);
   const [activeTab, setActiveTab] = useState("today");
 
-  const addFrame = useAddFrame();
+  // const addFrame = useAddFrame();
   // const openUrl = useOpenUrl();
 
   useEffect(() => {
@@ -43,37 +51,37 @@ export default function App() {
     }
   }, [setFrameReady, isFrameReady]);
 
-  const handleAddFrame = useCallback(async () => {
-    const frameAdded = await addFrame();
-    setFrameAdded(Boolean(frameAdded));
-  }, [addFrame]);
+  // const handleAddFrame = useCallback(async () => {
+  //   // const frameAdded = await addFrame();
+  //   // setFrameAdded(Boolean(frameAdded));
+  // }, [addFrame]);
 
-  const saveFrameButton = useMemo(() => {
-    if (context && !context.client.added) {
-      return (
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={handleAddFrame}
-          className="text-[var(--app-accent)] p-4"
-          icon={<Icon name="plus" size="sm" />}
-        >
-          Save Frame
-        </Button>
-      );
-    }
+  // const saveFrameButton = useMemo(() => {
+  //   if (context && !context.client.added) {
+  //     return (
+  //       <Button
+  //         variant="ghost"
+  //         size="sm"
+  //         onClick={handleAddFrame}
+  //         className="text-[var(--app-accent)] p-4"
+  //         icon={<Icon name="plus" size="sm" />}
+  //       >
+  //         Save Frame
+  //       </Button>
+  //     );
+  //   }
 
-    if (frameAdded) {
-      return (
-        <div className="flex items-center space-x-1 text-sm font-medium text-[#0052FF] animate-fade-out">
-          <Icon name="check" size="sm" className="text-[#0052FF]" />
-          <span>Saved</span>
-        </div>
-      );
-    }
+  //   if (frameAdded) {
+  //     return (
+  //       <div className="flex items-center space-x-1 text-sm font-medium text-[#0052FF] animate-fade-out">
+  //         <Icon name="check" size="sm" className="text-[#0052FF]" />
+  //         <span>Saved</span>
+  //       </div>
+  //     );
+  //   }
 
-    return null;
-  }, [context, frameAdded, handleAddFrame]);
+  //   return null;
+  // }, [context, frameAdded, handleAddFrame]);
 
   return (
     <div>
