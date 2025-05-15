@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { MessageSquareIcon, HeartIcon, RepeatIcon } from "lucide-react";
 interface RecapCardProps {
   username: string;
@@ -28,6 +29,13 @@ export const RecapCard: React.FC<RecapCardProps> = ({
           alt={username}
           className="h-10 w-10 rounded-full mr-3"
         />
+        {/* <Image
+          src={avatar}
+          alt={username}
+          className="h-10 w-10 rounded-full mr-3"
+          width={500}
+          height={300}
+        /> */}
         <div>
           <div className="flex items-center">
             <span className="font-semibold">{username}</span>
@@ -38,15 +46,15 @@ export const RecapCard: React.FC<RecapCardProps> = ({
       </div>
       <p className="mb-4">{content}</p>
       <div className="flex space-x-6 text-gray-400">
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <MessageSquareIcon className="h-4 w-4 mr-1" />
-          <span className="text-xs">{replies}</span>
+          <span className="text-xs ">{replies}</span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <RepeatIcon className="h-4 w-4 mr-1" />
           <span className="text-xs">{recasts}</span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <HeartIcon className="h-4 w-4 mr-1" />
           <span className="text-xs">{likes}</span>
         </div>

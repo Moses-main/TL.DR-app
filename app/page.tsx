@@ -5,24 +5,24 @@ import {
   useAddFrame,
   useOpenUrl,
 } from "@coinbase/onchainkit/minikit";
-import {
-  Name,
-  Identity,
-  Address,
-  Avatar,
-  EthBalance,
-} from "@coinbase/onchainkit/identity";
-import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownDisconnect,
-} from "@coinbase/onchainkit/wallet";
+// import {
+//   Name,
+//   Identity,
+//   Address,
+//   Avatar,
+//   EthBalance,
+// } from "@coinbase/onchainkit/identity";
+// import {
+//   ConnectWallet,
+//   Wallet,
+//   WalletDropdown,
+//   WalletDropdownDisconnect,
+// } from "@coinbase/onchainkit/wallet";
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { Button } from "./components/DemoComponents";
 import { Icon } from "./components/DemoComponents";
-import { Home } from "./components/DemoComponents";
-import { Features } from "./components/DemoComponents";
+// import { Home } from "./components/DemoComponents";
+// import { Features } from "./components/DemoComponents";
 // IMPORT FOR THE FARCASTER MINI APP
 import { Header } from "./components/Header";
 import { TabNavigation } from "./components/TabNavigation";
@@ -32,10 +32,10 @@ import { RecapFeed } from "./components/RecapFeed";
 export default function App() {
   const { setFrameReady, isFrameReady, context } = useMiniKit();
   const [frameAdded, setFrameAdded] = useState(false);
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("today");
 
   const addFrame = useAddFrame();
-  const openUrl = useOpenUrl();
+  // const openUrl = useOpenUrl();
 
   useEffect(() => {
     if (!isFrameReady) {
