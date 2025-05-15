@@ -40,7 +40,8 @@ export default function App() {
     isFrameReady, // context
   } = useMiniKit();
   // const [frameAdded, setFrameAdded] = useState(false);
-  const [activeTab, setActiveTab] = useState("today");
+  // const [activeTab, setActiveTab] = useState("today");
+  const [activeTab, setActiveTab] = useState<"day" | "week">("day");
 
   // const addFrame = useAddFrame();
   // const openUrl = useOpenUrl();
