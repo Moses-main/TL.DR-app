@@ -1,0 +1,12 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "WarpWrap",
+    "iconUrl": "https://yoink.party/logo.png",
+    "homeUrl": "https://warpwrap.vercel.app/",
+    "imageUrl": "public/warpwrap.png",
+    "buttonTitle": "Trends",
+    "splashImageUrl": "public/warpwrap.png",
+    "splashBackgroundColor": "#f5f0ec"
+  }
+}
