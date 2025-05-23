@@ -33,6 +33,7 @@ import { Header } from "./components/Header";
 import { TabNavigation } from "./components/TabNavigation";
 import { TrendingTopics } from "./components/TrendingTopics";
 import { RecapFeed } from "./components/RecapFeed";
+import { TrendingRecaps } from "./components/TrendingRecaps";
 
 export default function App() {
   const {
@@ -120,7 +121,15 @@ export default function App() {
                 setActiveTab={setActiveTab}
               />
               <TrendingTopics timeframe={activeTab} />
-              <RecapFeed timeframe={activeTab} />
+
+              {/* THE BELOW COMPONENT DOES SAME THING AS THE  TrendingRecaps component 
+              BUT THE TrendingRecaps COMPONENT HAS THE API INTEGRATED. */}
+
+              {/* DUMMY DATA HERE */}
+              {/* <RecapFeed timeframe={activeTab} /> */}
+
+              {/* API INTEGRATED */}
+              <TrendingRecaps />
             </div>
           </div>
           {/* {activeTab === "home" && <Home setActiveTab={setActiveTab} />} */}
